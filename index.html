@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>喫茶 つむぎ</title>
+  <meta name="description" content="昭和から続く、心やすらぐひととき" />
+
+  <!-- フォントはHTMLで読み込み -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- ここで外部CSSをリンク -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ヘッダー -->
+  <header>
+    <nav class="nav">
+      <div class="brand">喫茶 つむぎ</div>
+      <a href="#about">マスター紹介</a>
+      <a href="#menu">メニュー</a>
+      <a href="#gallery">店内の雰囲気</a>
+      <a href="#access">店舗情報</a>
+      <div class="spacer"></div>
+      <a class="cta" href="#access">ご来店案内</a>
+    </nav>
+  </header>
+
+  <!-- ヒーロー -->
+  <section class="hero" aria-label="Hero">
+    <img alt="店内の雰囲気" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1920&auto=format&fit=crop" />
+    <div class="hero-inner">
+      <div class="hero-badge">喫茶 つむぎ</div>
+      <h1>昭和から続く、心やすらぐひととき</h1>
+      <p>1975年創業・本格珈琲と手作りの味</p>
+    </div>
+    <div class="scroll-cue">↓ scroll</div>
+  </section>
+
+  <!-- マスター紹介 -->
+  <section id="about" class="wrap">
+    <h2 class="section-title">マスター紹介</h2>
+    <div class="about">
+      <div class="card">
+        <img alt="店先のマスター" src="https://images.unsplash.com/photo-1521577352947-9bb58764b69a?q=80&w=1600&auto=format&fit=crop" />
+      </div>
+      <div class="card">
+        <div class="pad">
+          <p class="muted">店主 田中一郎</p>
+          <p>1975年、この場所で焙煎をはじめて以来、50年近くになりました。砂糖派にも濃い派にも、ひとりひとりの好みを聞きながら丁寧にお淹れします。</p>
+          <p>今では常連さんも観光でふらっと寄る方も多く、店の空気はいつも穏やかです。定番のプリンやアメリカン、トーストのセットも人気。</p>
+          <p>喫茶店は街の休憩所。気持ちを整えたり、誰かと笑ったり、少しだけ背中を押す時間があれば嬉しいです。ご来店お待ちしています。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- メニュー -->
+  <section id="menu" class="wrap">
+    <h2 class="section-title">メニュー</h2>
+    <p class="muted">心込めて淹れた、街と歩んできた味をお楽しみください</p>
+    <div class="menu-grid" style="margin-top:14px">
+      <div class="menu-card">
+        <h3>珈琲</h3>
+        <div class="menu-list">
+          <div class="menu-item"><span>ブレンド(深煎り)</span><span class="yen">550円</span></div>
+          <div class="menu-item"><span>アメリカン</span><span class="yen">500円</span></div>
+          <div class="menu-item"><span>カフェオレ</span><span class="yen">550円</span></div>
+          <div class="menu-item"><span>アイス珈琲</span><span class="yen">550円</span></div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <h3>軽食</h3>
+        <div class="menu-list">
+          <div class="menu-item"><span>ナポリタン</span><span class="yen">800円</span></div>
+          <div class="menu-item"><span>ミックスサンド</span><span class="yen">700円</span></div>
+          <div class="menu-item"><span>トースト(バター)</span><span class="yen">450円</span></div>
+          <div class="menu-item"><span>ピザトースト</span><span class="yen">600円</span></div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <h3>デザート</h3>
+        <div class="menu-list">
+          <div class="menu-item"><span>プリン</span><span class="yen">450円</span></div>
+          <div class="menu-item"><span>ホットケーキ</span><span class="yen">600円</span></div>
+          <div class="menu-item"><span>アイスクリーム</span><span class="yen">400円</span></div>
+          <div class="menu-item"><span>コーヒーゼリー</span><span class="yen">550円</span></div>
+        </div>
+      </div>
+    </div>
+    <p class="muted" style="margin-top:10px">※価格は税込みです</p>
+  </section>
+
+  <!-- 店内の雰囲気 / ギャラリー -->
+  <section id="gallery" class="wrap">
+    <h2 class="section-title">店内の雰囲気</h2>
+    <p class="muted">落ち着いた空間で、ゆっくりとした時間をお過ごしください</p>
+    <div class="gallery" style="margin-top:14px">
+      <figure class="ph g-12"><img alt="店内写真" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1920&auto=format&fit=crop"></figure>
+      <figure class="ph g-6"><img alt="客席" src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=1200&auto=format&fit=crop"></figure>
+      <figure class="ph g-6"><img alt="窓際の席" src="https://images.unsplash.com/photo-1557026965-6f2ab2b09f2b?q=80&w=1200&auto=format&fit=crop"></figure>
+      <figure class="ph g-4"><img alt="常連さん" src="https://images.unsplash.com/photo-1519340241574-2cec6aef0c01?q=80&w=900&auto=format&fit=crop"></figure>
+      <figure class="ph g-4"><img alt="テーブル" src="https://images.unsplash.com/photo-1481833761820-0509d3217039?q=80&w=900&auto=format&fit=crop"></figure>
+      <figure class="ph g-4"><img alt="こだわりの器" src="https://images.unsplash.com/photo-1498804103079-a6351b050096?q=80&w=900&auto=format&fit=crop"></figure>
+      <figure class="ph g-12"><img alt="赤いカップ" src="https://images.unsplash.com/photo-1497515114629-f71d768fd07c?q=80&w=1920&auto=format&fit=crop"></figure>
+    </div>
+  </section>
+
+  <!-- こだわり -->
+  <section class="wrap">
+    <h2 class="section-title">こだわり</h2>
+    <div class="features">
+      <div class="feature">
+        <h4>本格焙煎</h4>
+        <p class="muted">銘柄ごとに最適に、一本ずつ丁寧にドリップしています。</p>
+      </div>
+      <div class="feature">
+        <h4>落ち着いた空間</h4>
+        <p class="muted">レトロな家具と柔らかな光が心地良い空間をつくります。</p>
+      </div>
+      <div class="feature">
+        <h4>温かい時間</h4>
+        <p class="muted">マスターや常連さんの穏やかな会話を楽しみながら、ほっとひと息。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- アクセス -->
+  <section id="access" class="wrap">
+    <h2 class="section-title">店舗情報</h2>
+    <div class="access">
+      <div class="info">
+        <p>〒150-0001<br>東京都渋谷区神宮前1-2-3 つむぎビル1F</p>
+        <p><strong>営業時間</strong><br>平日 9:00 - 19:00 / 土日祝 10:00 - 18:00</p>
+        <p><strong>定休日</strong><br>毎週火曜日</p>
+        <p><strong>電話</strong><br>03-1234-5678</p>
+      </div>
+      <div class="map">
+        <img alt="地図の代替" src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?q=80&w=1600&auto=format&fit=crop" style="width:100%;height:100%;object-fit:cover" />
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
+      <div>© 1975-2025 喫茶 つむぎ</div>
+      <div>このサイトは学習用のデモです。写真はフリー素材（Unsplash）を使用しています。</div>
+    </div>
+  </footer>
+
+  <!-- ちょいJS：ページ内リンクのスムーススクロール -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        const id=a.getAttribute('href').slice(1);
+        const el=document.getElementById(id);
+        if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth'});}
+      });
+    });
+  </script>
+</body>
+</html>

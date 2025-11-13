@@ -1,0 +1,105 @@
+:root{
+  --bg:#fbf7ee;
+  --paper:#fffdf7;
+  --ink:#2a2a2a;
+  --ink-weak:#6b6b6b;
+  --brand:#8b6b4a;
+  --brand-weak:#c6b09a;
+  --line:#e8e1d6;
+  --shadow:0 10px 30px rgba(0,0,0,.06);
+  --radius:18px;
+  --radius-lg:28px;
+  --max:1100px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:"Noto Sans JP",system-ui,-apple-system,Segoe UI,Roboto,Arial,"Hiragino Kaku Gothic ProN","Noto Sans JP",Meiryo,"sans-serif";
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.75;
+}
+img{max-width:100%;display:block}
+
+/* ヘッダー */
+header{
+  position:sticky;top:0;z-index:50;
+  backdrop-filter:saturate(140%) blur(8px);
+  background:rgba(255,253,247,.72);
+  border-bottom:1px solid var(--line);
+}
+.nav{max-width:var(--max);margin:auto;display:flex;align-items:center;gap:18px;padding:12px 20px}
+.brand{font-family:"Noto Serif JP", serif;font-weight:700;letter-spacing:.08em}
+.nav a{color:var(--ink);text-decoration:none;font-size:14px;padding:8px 10px;border-radius:12px}
+.nav a:hover{background:var(--paper)}
+.spacer{flex:1}
+.cta{background:var(--brand);color:#fff;padding:8px 14px;border-radius:999px}
+
+/* ヒーロー */
+.hero{
+  position:relative;height:min(70vh,780px);display:grid;place-items:center;overflow:hidden;border-bottom:1px solid var(--line);
+}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:contrast(1.05) saturate(1.05)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.35))}
+.hero-inner{position:relative;color:#fff;text-align:center;padding:0 20px}
+.hero-badge{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.45);padding:6px 10px;border-radius:999px;font-size:12px;backdrop-filter:blur(4px)}
+.hero h1{margin:14px 0 8px;font-size:clamp(26px,4vw,40px);font-family:"Noto Serif JP",serif;letter-spacing:.06em}
+.hero p{margin:0;font-size:14px;opacity:.95}
+.scroll-cue{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);color:#fff;font-size:12px;opacity:.8}
+
+/* セクション共通 */
+section{padding:70px 20px}
+.wrap{max-width:var(--max);margin:auto}
+.section-title{font-family:"Noto Serif JP",serif;font-weight:700;margin:0 0 18px;font-size:22px;letter-spacing:.08em}
+.muted{color:var(--ink-weak);font-size:14px}
+
+/* マスター紹介 */
+.about{display:grid;grid-template-columns:1.2fr .9fr;gap:28px;align-items:center}
+.about .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-lg);box-shadow:var(--shadow);overflow:hidden}
+.about .card img{aspect-ratio:4/3;object-fit:cover}
+.about .card .pad{padding:24px}
+
+/* メニュー */
+.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.menu-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px}
+.menu-card h3{margin:2px 0 10px;font-size:16px;font-weight:700;letter-spacing:.08em}
+.menu-list{display:grid;gap:8px}
+.menu-item{display:flex;justify-content:space-between;gap:14px;border-bottom:1px dashed var(--line);padding:6px 0}
+.menu-item:last-child{border-bottom:none}
+.yen{font-variant-numeric:tabular-nums}
+
+/* ギャラリー */
+.gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+.g-12{grid-column:span 12}
+.g-6{grid-column:span 6}
+.g-4{grid-column:span 4}
+.ph{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}
+.ph img{aspect-ratio:16/10;object-fit:cover}
+
+/* こだわり */
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.feature{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px}
+.feature h4{margin:.2rem 0 .4rem;font-size:16px}
+
+/* アクセス/フッター */
+.access{display:grid;grid-template-columns:1.1fr .9fr;gap:24px}
+.info{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px}
+.map{min-height:260px;border-radius:var(--radius);border:1px solid var(--line);overflow:hidden}
+footer{padding:40px 20px;border-top:1px solid var(--line);color:var(--ink-weak)}
+
+/* レスポンシブ */
+@media (max-width: 960px){
+  .about{grid-template-columns:1fr}
+  .menu-grid{grid-template-columns:1fr}
+  .features{grid-template-columns:1fr}
+  .access{grid-template-columns:1fr}
+  .gallery{grid-template-columns:repeat(6,1fr)}
+  .g-6{grid-column:span 6}
+  .g-4{grid-column:span 3}
+}
+@media (max-width: 560px){
+  .gallery{grid-template-columns:repeat(2,1fr)}
+  .g-6,.g-4{grid-column:span 2}
+  .hero{height:56vh}
+}
